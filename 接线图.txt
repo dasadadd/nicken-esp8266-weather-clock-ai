@@ -1,0 +1,17 @@
+## 硬件接线图
+
+| 模块          | 模块引脚     | 连接到          | Wemos D1 Mini 引脚 | 备注                  |
+|---------------|--------------|-----------------|---------------------|-----------------------|
+| **电源**      | +            | Breadboard +    | 5V / 3.3V           | 所有模块共用          |
+| **电源**      | -            | Breadboard -    | GND                 | 所有模块共用          |
+| **OLED**      | VCC          | Breadboard +    | 3.3V                | I2C地址 0x3C          |
+| **OLED**      | GND          | Breadboard -    | GND                 | -                     |
+| **OLED**      | SDA          | -               | **D2 (GPIO4)**      | 与DS3231共用          |
+| **OLED**      | SCL          | -               | **D1 (GPIO5)**      | 与DS3231共用          |
+| **DS3231**    | VCC          | Breadboard +    | 3.3V                | I2C地址 0x68          |
+| **DS3231**    | GND          | Breadboard -    | GND                 | -                     |
+| **DS3231**    | SDA          | -               | **D2 (GPIO4)**      | 与OLED共用            |
+| **DS3231**    | SCL          | -               | **D1 (GPIO5)**      | 与OLED共用            |
+| **DHT11**     | VCC          | Breadboard +    | 3.3V                | -                     |
+| **DHT11**     | GND          | Breadboard -    | GND                 | -                     |
+| **DHT11**     | DATA         | -               | **D4 (GPIO2)**      | 温湿度传感器          |
